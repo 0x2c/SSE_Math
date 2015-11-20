@@ -5,12 +5,6 @@
 #include <assert.h>
 #include <xmmintrin.h>
 
-// Can't use SSE 4.1 on clang llvm compiler for some reason :C
-// Maybe will research more indepth later on why it isn't enabled by default
-// Other library I found was accelerator.h, but can't use that for my projects
-// Ended up using SSE 2
-
-
 // It's better to use FPU (single instruction, single data) for vec3
 // because extra wasted 32 bits or more (need to be aligned to 16)
 // can cause cache miss. But, for science, right?
